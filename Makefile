@@ -1,8 +1,6 @@
-compile : 
-	echo Compling
-	gcc -O3 -fopenmp -o work forParallel.c
-	echo Running
-	./work de.pgm
+compile :
+	gcc -O3 -std=c99 -fopenmp seq.c -o work -lm
 
-clear : 
-	rm work
+clear :
+       	rm work
+		rm Cpteste.*
