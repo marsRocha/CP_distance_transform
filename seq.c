@@ -153,5 +153,4 @@ int main(int argc, char* argv[]){
     writePgmFile(ofilename);
 
     printf("Wallclock time = %f\n", wtime);
-    printf("Normal end of execution.\n");
 }
