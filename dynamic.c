@@ -6,6 +6,7 @@
 #include <omp.h>
 
 #define MAX_VALUE 65535
+#define MAX_THREADS 2
 
 int columns;
 int rows;
@@ -89,7 +90,7 @@ void writePgmFile(char* filename){
         for (int row = 0; row < rows; row++) {
             int pInt = pixelData[row + col * rows];
             fprintf(pgmFile, "%d ",pInt);
-        }
+        }\
         fprintf(pgmFile, "\n");
     }
     fclose(pgmFile);
@@ -108,7 +109,7 @@ void transform(){
     while(haswhite){
         bool hadwhite = false;
 
-        omp_set_num_threads(2);
+        omp_set_num_threads(MAX_THREADS);
         #pragma omp parallel for schedule(dynamic)
         for (int col = 0; col < columns; col++) {
             for (int row = 0; row < rows; row++) {
@@ -155,5 +156,5 @@ int main(int argc, char* argv[]){
     //writes the distance tranform of the original image
     writePgmFile(ofilename);
 
-    printf("Wallclock time = %f\n", wtime);
+    printf("%f\n", wtime);
 }

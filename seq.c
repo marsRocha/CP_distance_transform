@@ -152,5 +152,5 @@ int main(int argc, char* argv[]){
     //writes the distance tranform of the original image
     writePgmFile(ofilename);
 
-    printf("Wallclock time = %f\n", wtime);
+    printf("%f\n", wtime);
 }
