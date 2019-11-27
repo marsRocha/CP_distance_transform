@@ -5,7 +5,6 @@
 void main(int argc, char* argv[]){ 
 
     char* filename = argv[1];
-    char* ofilename = "outImage.pgm"; 
     
     FILE* file;
 
@@ -14,18 +13,17 @@ void main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
 
-    double sum = 0;
+    float sum = 0;
+    int lines = 20;
 
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < lines; i++)
     {
-        double num;
-        fgetc(file);
-        fscanf(file, "%lf", &num);
-        printf("%lf", num);
+        float num;
+        fscanf(file, "%f", &num);
         sum += num;
     }
 
-    sum = sum/100;
+    sum = sum/lines;
 
-    printf("%lf", sum);
+    printf("%f", sum);
 }
