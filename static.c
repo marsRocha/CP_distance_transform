@@ -6,7 +6,7 @@
 #include <omp.h>
 
 #define MAX_VALUE 65535
-#define MAX_THREADS 2
+#define MAX_THREADS 4
 
 int columns;
 int rows;
@@ -113,6 +113,7 @@ void transform(){
         #pragma omp parallel for schedule(static)
         for (int col = 0; col < columns; col++) {
             for (int row = 0; row < rows; row++) {
+                printf("%d", omp_get_thread_num());
                 pInt = pixelData[row + col * rows];
                 //se for branco
                 if(pInt == MAX_VALUE){
