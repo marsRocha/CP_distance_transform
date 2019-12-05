@@ -1,4 +1,5 @@
 Local to Remote:
 scp static.c pg41086@search1.di.uminho.pt:~/CP
+scp -r CP/ pg41086@search1.di.uminho.pt:~/CP
 Remote to local:
 scp -r CP/ pg41086@search1.di.uminho.pt:~/ /home/marcio/Desktop/CP_distance_transform/
