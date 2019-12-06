@@ -44,7 +44,7 @@ void main(int argc, char* argv[]){
         }
 
         float sum = 0;
-        int lines = 100;
+        int lines = 10;
 
         for (int i = 0; i < lines; i++)
         {

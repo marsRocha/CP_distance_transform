@@ -6,7 +6,8 @@
 #include <omp.h>
 
 #define MAX_VALUE 65535
-#define MAX_THREADS 4
+
+int MAX_THREADS = 2;
 
 int columns;
 int rows;
@@ -15,13 +16,6 @@ int* pixelData;
 
 //To record time of execution
 double wtime;
-
-int min(int a, int b){
-    if( a < b)
-        return a;
-    else
-        return b;   
-}
 
 void skipComments(FILE* f){
     int c;
@@ -62,12 +56,12 @@ void readPgmFile(char* filename){
 
     int pInt;
     // allocate information from file
-    for (int col = 0; col < columns; col++) {
-        for (int row = 0; row < rows; row++) {
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < columns; col++) {
             fscanf(pgmFile,"%d", &pInt);
             if(pInt != 0)
-                pixelData[row + col * rows] = MAX_VALUE;
-            else pixelData[row + col * rows] = 0;
+                pixelData[col + row * columns] = MAX_VALUE;
+            else pixelData[col + row * columns] = 0;
         }
     }
     max_gray = 0;
@@ -86,9 +80,9 @@ void writePgmFile(char* filename){
     fprintf(pgmFile, "%d\n", max_gray);
 
     //write data
-    for (int col = 0; col < columns; col++) {
-        for (int row = 0; row < rows; row++) {
-            int pInt = pixelData[row + col * rows];
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < columns; col++) {   
+            int pInt = pixelData[col + row * columns];
             fprintf(pgmFile, "%d ",pInt);
         }
         fprintf(pgmFile, "\n");
@@ -103,44 +97,49 @@ void transform(){
 
     bool haswhite = true;
     int pInt;
+    double totaltime = 0;
 
-    wtime = omp_get_wtime();
+    omp_set_num_threads(MAX_THREADS);
+    //wtime = omp_get_wtime();
     
     while(haswhite){
         bool hadwhite = false;
 
-        omp_set_num_threads(MAX_THREADS);
-        #pragma omp parallel for schedule(static)
-        for (int col = 0; col < columns; col++) {
-            for (int row = 0; row < rows; row++) {
-                printf("%d", omp_get_thread_num());
-                pInt = pixelData[row + col * rows];
+        #pragma omp parallel for schedule(guided)
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < columns; col++) {
+                pInt = pixelData[col + row * columns];
                 //se for branco
                 if(pInt == MAX_VALUE){
                     hadwhite = true;
                     int minNei = MAX_VALUE;
                     //percorre os vizinhos
-                    for (int c = col-1; c <= col+1; c++) {
-                        for (int r = row-1; r <= row+1; r++) {
+                    for (int r = row-1; r <= row+1; r++) {
+                        for (int c = col-1; c <= col+1; c++) {
                             //se nao for o pixel onde estou ou existir no array
                             if(r != row && c != col || (r <= -1 || r >= rows + 1 || c <= -1 || c >= columns + 1)){
-                                int neiPixel = pixelData[r + c * rows];
-                                minNei = min(neiPixel,minNei);
+                                int neiPixel = pixelData[c + r * columns];
+                                if(neiPixel < minNei)
+                                    minNei = neiPixel;
                             }
                         }
                     }
                     if(minNei < MAX_VALUE){
-                        mpixelData[row + col * rows] = minNei + 1;
+                        mpixelData[col + row * columns] = minNei + 1;
                         if(max_gray < minNei + 1)
                             max_gray = minNei + 1;
                     }
                 }
             }
         }
+        wtime = omp_get_wtime();
         haswhite = hadwhite;
         memcpy(pixelData, mpixelData,sizeof(int) * columns * rows);
+        wtime = omp_get_wtime() - wtime;
+        totaltime += wtime;
+        //printf("%f\n", wtime);
     }
-    wtime = omp_get_wtime() - wtime;
+    printf("%f\n", totaltime);
 }
 
 
@@ -157,5 +156,5 @@ int main(int argc, char* argv[]){
     //writes the distance tranform of the original image
     writePgmFile(ofilename);
 
-    printf("%f\n", wtime);
+    //printf("%f\n", wtime);
 }

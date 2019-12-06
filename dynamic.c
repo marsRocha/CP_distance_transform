@@ -6,7 +6,7 @@
 #include <omp.h>
 
 #define MAX_VALUE 65535
-#define MAX_THREADS 2
+#define MAX_THREADS 1
 
 int columns;
 int rows;
@@ -62,12 +62,12 @@ void readPgmFile(char* filename){
 
     int pInt;
     // allocate information from file
-    for (int col = 0; col < columns; col++) {
-        for (int row = 0; row < rows; row++) {
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < columns; col++) {
             fscanf(pgmFile,"%d", &pInt);
             if(pInt != 0)
-                pixelData[row + col * rows] = MAX_VALUE;
-            else pixelData[row + col * rows] = 0;
+                pixelData[col + row * columns] = MAX_VALUE;
+            else pixelData[col + row * columns] = 0;
         }
     }
     max_gray = 0;
@@ -86,11 +86,11 @@ void writePgmFile(char* filename){
     fprintf(pgmFile, "%d\n", max_gray);
 
     //write data
-    for (int col = 0; col < columns; col++) {
-        for (int row = 0; row < rows; row++) {
-            int pInt = pixelData[row + col * rows];
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < columns; col++) {   
+            int pInt = pixelData[col + row * columns];
             fprintf(pgmFile, "%d ",pInt);
-        }\
+        }
         fprintf(pgmFile, "\n");
     }
     fclose(pgmFile);
@@ -109,27 +109,26 @@ void transform(){
     while(haswhite){
         bool hadwhite = false;
 
-        omp_set_num_threads(MAX_THREADS);
-        #pragma omp parallel for schedule(dynamic)
-        for (int col = 0; col < columns; col++) {
-            for (int row = 0; row < rows; row++) {
-                pInt = pixelData[row + col * rows];
+        #pragma omp parallel for schedule(dynamic) num_threads(MAX_THREADS)
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < columns; col++) {
+                pInt = pixelData[col + row * columns];
                 //se for branco
                 if(pInt == MAX_VALUE){
                     hadwhite = true;
                     int minNei = MAX_VALUE;
                     //percorre os vizinhos
-                    for (int c = col-1; c <= col+1; c++) {
-                        for (int r = row-1; r <= row+1; r++) {
+                    for (int r = row-1; r <= row+1; r++) {
+                        for (int c = col-1; c <= col+1; c++) {
                             //se nao for o pixel onde estou ou existir no array
                             if(r != row && c != col || (r <= -1 || r >= rows + 1 || c <= -1 || c >= columns + 1)){
-                                int neiPixel = pixelData[r + c * rows];
+                                int neiPixel = pixelData[c + r * columns];
                                 minNei = min(neiPixel,minNei);
                             }
                         }
                     }
                     if(minNei < MAX_VALUE){
-                        mpixelData[row + col * rows] = minNei + 1;
+                        mpixelData[col + row * columns] = minNei + 1;
                         if(max_gray < minNei + 1)
                             max_gray = minNei + 1;
                     }
