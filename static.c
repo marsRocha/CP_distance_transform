@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <stdbool.h> //bool
-#include <ctype.h> // needed for isspace();
+#include <ctype.h>
 #include <omp.h>
 
 #define MAX_VALUE 65535
-
-int MAX_THREADS = 2;
+int MAX_THREADS = 1;
 
 int columns;
 int rows;
 int max_gray;
 int* pixelData;
+
+int* mpixelData;
 
 //To record time of execution
 double wtime;
@@ -92,26 +92,24 @@ void writePgmFile(char* filename){
 
 void transform(){
 
-    int* mpixelData = (int*)malloc(sizeof(int) * columns * rows);
-    memcpy(mpixelData, pixelData, sizeof(int) * columns * rows);
+    int* cupthree;
 
-    bool haswhite = true;
+    int haswhite = 1;
     int pInt;
-    double totaltime = 0;
 
     omp_set_num_threads(MAX_THREADS);
-    //wtime = omp_get_wtime();
+    wtime = omp_get_wtime();
     
-    while(haswhite){
-        bool hadwhite = false;
+    while(haswhite == 1){
+        int hadwhite = 0;
 
-        #pragma omp parallel for schedule(guided)
+        #pragma omp parallel for schedule(static)
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < columns; col++) {
                 pInt = pixelData[col + row * columns];
                 //se for branco
                 if(pInt == MAX_VALUE){
-                    hadwhite = true;
+                    hadwhite = 1;
                     int minNei = MAX_VALUE;
                     //percorre os vizinhos
                     for (int r = row-1; r <= row+1; r++) {
@@ -129,17 +127,24 @@ void transform(){
                         if(max_gray < minNei + 1)
                             max_gray = minNei + 1;
                     }
+                    else
+                    {       
+                        mpixelData[col + row * columns] = pInt;
+                    }
+                }
+                else
+                {
+                    mpixelData[col + row * columns] = pInt;
                 }
             }
         }
-        wtime = omp_get_wtime();
+        cupthree = pixelData;
+        pixelData = mpixelData;
+        mpixelData = cupthree;
+
         haswhite = hadwhite;
-        memcpy(pixelData, mpixelData,sizeof(int) * columns * rows);
-        wtime = omp_get_wtime() - wtime;
-        totaltime += wtime;
-        //printf("%f\n", wtime);
     }
-    printf("%f\n", totaltime);
+    wtime = omp_get_wtime() - wtime;
 }
 
 
@@ -147,14 +152,17 @@ int main(int argc, char* argv[]){
 
     char* filename = argv[1];
     char* ofilename = "outImage.pgm"; 
-
+    
+    //reads the distance tranform of the original image
     readPgmFile(filename);
+
+    mpixelData = (int*)malloc(sizeof(int) * columns * rows);
 
     //calculates the distance transform from the sourced image
     transform();
 
-    //writes the distance tranform of the original image
+    //writes the distance transform of the original image
     writePgmFile(ofilename);
 
-    //printf("%f\n", wtime);
+    printf("%f\n", wtime);
 }
