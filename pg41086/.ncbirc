@@ -1,0 +1,7 @@
+[NCBI]
+Data=/opt/bio/ncbi/data/
+
+[mpiBLAST]
+Shared=/home/pg41086/bio/ncbi/db/
+Local=/tmp/pg41086/db/
+

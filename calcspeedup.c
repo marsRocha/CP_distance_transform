@@ -18,7 +18,7 @@ void main(int argc, char* argv[]){
 
     char* inputDir = argv[1];
     
-    FILE    *currentFile;
+    FILE *currentFile;
 
     currentFile = fopen(inputDir, "r");
     if (currentFile == NULL)
@@ -28,10 +28,10 @@ void main(int argc, char* argv[]){
         exit(EXIT_FAILURE);
     }
     float sum = 0;
-    int lines = 105;
+    int lines = 35;
     int tCount = 0;
     int seqI = 0;
-    float seq[5]= { 0.007149, 0.060825, 0.533003, 4.585213, 41.480244 };
+    float seq[5]= { 0.008549, 0.065551, 0.584362, 4.534909, 35.994884 };
     for (int i = 0; i < lines; i++)
     {
         float speed;

@@ -5,7 +5,7 @@
 #include <omp.h>
 
 #define MAX_VALUE 65535
-int MAX_THREADS = 1;
+int MAX_THREADS;
 
 int columns;
 int rows;
@@ -97,13 +97,12 @@ void transform(){
     int haswhite = 1;
     int pInt;
 
-    omp_set_num_threads(MAX_THREADS);
     wtime = omp_get_wtime();
     
     while(haswhite == 1){
         int hadwhite = 0;
 
-        #pragma omp parallel for schedule(guided)
+        #pragma omp parallel for schedule(guided) num_threads(MAX_THREADS) private(pInt)
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < columns; col++) {
                 pInt = pixelData[col + row * columns];
@@ -115,7 +114,7 @@ void transform(){
                     for (int r = row-1; r <= row+1; r++) {
                         for (int c = col-1; c <= col+1; c++) {
                             //se nao for o pixel onde estou ou existir no array
-                            if(r != row && c != col || (r <= -1 || r >= rows + 1 || c <= -1 || c >= columns + 1)){
+                            if((r != row && c != col) || (r <= -1 || r >= rows + 1 || c <= -1 || c >= columns + 1)){
                                 int neiPixel = pixelData[c + r * columns];
                                 if(neiPixel < minNei)
                                     minNei = neiPixel;
@@ -152,7 +151,8 @@ int main(int argc, char* argv[]){
 
     char* filename = argv[1];
     char* ofilename = "outImage.pgm"; 
-    
+    MAX_THREADS = atoi(argv[2]);
+
     //reads the distance tranform of the original image
     readPgmFile(filename);
 

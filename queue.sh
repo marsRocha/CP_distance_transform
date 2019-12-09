@@ -1,3 +1,3 @@
 #!/bin/sh
 
-qsub -v img=$1 ./run.sh
+qsub -v th=$1 ./run.sh
