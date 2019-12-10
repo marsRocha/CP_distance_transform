@@ -1,462 +1,3 @@
-nano dynamic1.c 
-nano run.sh 
-nano Makefile 
-./queue.sh img256
-./queue.sh img1024
-./queue.sh img512
-./queue.sh img2048
-./queue.sh img4096
-nano run.sh 
-nano dynamic1.c 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano run.sh 
-nano dynamic1.c 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-qstat
-nano run.sh 
-nano Makefile 
-nano dynamicITTH.c 
-nano run.sh 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano run.sh 
-nano dynamicITTH.c 
-nano run.sh 
-nano Makefile 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano run.sh 
-nano Makefile 
-nano dynamicITTH.c 
-nano run.sh 
-nano dynamicITTH.c 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano run.sh 
-nano dynamicITTH.c 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano run.sh 
-nano dynamicITTH.c 
-./queue.sh img256
-./queue.sh img512
-nano run.sh 
-nano dynamicITTH.c 
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano dynamicITTH.c 
-nano run.sh 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-qstat
-showq
-exit
-showq
-shoq
-showq
-exit
-showq
-nano dynamicITTH.c 
-cd CP/
-nano dynamicITTH.c 
-nano run.sh 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano run.sh 
-nano dynamic1.c 
-./queue.sh img256
-nano Makefile 
-nano dynamic1.c 
-nano run.sh 
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano Makefile 
-nano run.sh 
-nano dynamic.c 
-./queue.sh img512
-./queue.sh img256
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-showq
-exit
-cd CP/
-ls
-make clear
-ls
-showq
-nano run.sh 
-nano Makefile 
-nano dynamic1.c 
-./queue.sh img256
-showq
-nano Makefile 
-nano run.sh 
-nano Makefile 
-nano dynamic.c 
-./queue.sh img256
-nano Makefile 
-nano run.sh 
-nano Makefile 
-nano dynamic1.c 
-./queue.sh img256
-exit
-ls
-cd CP/
-LS
-ls
-nano static.c 
-showq
-ls
-qstat
-ls
-nano Makefile 
-clear
-make clear
-ls
-nano Makefile 
-nano run.sh 
-nano queue.sh 
-exit
-cd CP/
-ls
-exit
-cd CP/
-ls
-la
-nano Makefile 
-nano dynamic1.c 
-nano run.sh 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano Makefile 
-nano dynamic1.c 
-nano run.sh 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-nano dynamic1.c 
-nano Makefile 
-nano static.c
-nano run.sh 
-nano Makefile 
-nano static.c
-nano Makefile 
-nano run.sh 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-showq
-qstat
-clear
-nano run.sh 
-nano Makefile 
-nano guided.c 
-./queue.sh img256
-./queue.sh img512
-./queue.sh img1024
-./queue.sh img2048
-./queue.sh img4096
-qstat -u pg41086
-shoq
-showq
-exit
-cd CP/
-ls
-clear
-make clear
-ls
-rm results*
-ls
-rm dynamic*
-ls
-rm guided.c seq.c static.c outImage.pgm 
-ls
-nano Makefile 
-nano queue.sh 
-nano run.sh 
-nano queue.sh 
-nano Makefile 
-ls
-./queue.sh 
-ls
-nano Cpteste.o696440 
-nano Cpteste.e696440 
-rm Cpteste.*
-rm results1tSeq*
-ls
-nano run.sh 
-./queue.sh 
-ls
-nano Cpteste.e696441 
-nano run.sh 
-rm results1tSeq*
-rm Cpteste.*
-ls
-
-ls
-qstat
-qstat -u pg41086
-ls
-nano results1tSeq1024.txt 
-nano Cpteste.e696442 
-nano run.sh 
-./queue.sh 
-ls
-
-nano run.sh 
-rm Cpteste.*
-rm results1tSeq
-rm results1tSeq*
-./queue.sh 
-ls
-nano Cpteste.o696444 
-nano Cpteste.e696444 
-rm results1tSeq*
-rm Cpteste.*
-ls
-nano Makefile 
-./queue.sh 
-qstat -u pg41086
-ls
-qstat
-showq
-clear
-ls
-showq
-clear
-ls
-make clear
-make Makefile 
-nano Makefile 
-nano run.sh 
-nano static.c 
-./queue.sh 
-nano run.sh 
-nano static.c 
-./queue.sh 
-nano run.sh 
-nano static.c 
-nano run.sh 
-./queue.sh 
-nano run.sh 
-nano static.c 
-nano run.sh 
-nano static.c 
-./queue.sh 
-nano run.sh 
-nano static.c 
-./queue.sh 
-nano run.sh 
-nano static.c 
-./queue.sh 
-nano Makefile 
-nano run.sh 
-nano dynamic
-nano dynamic.c 
-nano run.sh 
-nano Makefile 
-./queue.sh 
-nano Makefile 
-nano run.sh 
-nano dynamic.c 
-./queue.sh 
-nano dynamic.c 
-nano run.sh 
-./queue.sh 
-nano dynamic.c 
-nano run.sh 
-./queue.sh 
-nano dynamic.c 
-nano run.sh 
-nano dynamic.c 
-./queue.sh 
-nano dynamic.c 
-nano run.sh 
-./queue.sh 
-nano run.sh 
-nano dynamic.c 
-nano run.sh 
-./queue.sh 
-nano Makefile 
-nano run.sh 
-nano dynamic1.c 
-./queue.sh 
-nano run.sh 
-nano dynamic1.c 
-nano run.sh 
-./queue.sh 
-nano run.sh 
-nano dynamic1.c 
-./queue.sh 
-nano dynamic1.c 
-nano run.sh 
-nano dynamic1.c 
-./queue.sh 
-nano dynamic1.c 
-nano run.sh 
-./queue.sh 
-nano run.sh 
-nano dynamic1.c 
-./queue.sh 
-nano dynamic1.c 
-nano run.sh 
-./queue.sh 
-nano Makefile 
-nano guided.c 
-nano run.sh 
-nano Makefile 
-./queue.sh 
-nano run.sh 
-nano guided.c 
-./queue.sh 
-nano run.sh 
-nano guided.c 
-nano run.sh 
-./queue.sh 
-nano run.sh 
-nano guided.c 
-./queue.sh 
-nano run.sh 
-nano guided.c 
-./queue.sh 
-nano run.sh 
-nano guided.c 
-./queue.sh 
-nano guided.c 
-nano run.sh 
-nano guided.c 
-./queue.sh 
-showq
-ls
-nano results1tSeq256.txt 
-show q
-showq
-qstat
-showq
-qstat -u pg41086
-ls
-make clear
-ls
-nano Makefile 
-nano run.sh 
-nano Makefile 
-nano run.sh 
-nano static.c 
-nano Makefile 
-nano run.sh 
-./queue.sh 
-ls
-nano Cpteste.e696483 
-nano Cpteste.o696483
-qstat
-showq
-ls
-make clear
-rm results*
-ls
-nano guided.c 
-nano Makefile 
-nano run.sh 
-nano Makefile 
-nano guided.c 
-./queue.sh 
-nano run.sh 
-nano guided.c 
-nano run.sh 
-./queue.sh 
-nano run.sh 
-nano guided.c 
-./queue.sh 
-showq
-ls
-nano Cpteste.e696484
-nano guided.c 
-rm Cpteste.* results*
-ls
-nano guided.c 
-nano run.sh 
-./queue.sh 
-showq
-clear
-ls
-nano resultsGuidedT32Img2048.txt 
-nano resultsGuidedT32Img256.txt 
-nano resultsGuidedT32Img2048.txt 
-nano resultsGuidedT32Img256.txt 
-nano resultsGuidedT32Img2048.txt 
-nano guided.c 
-nano run.sh 
-./queue.sh 
-showq
-clear
-./queue.sh 
-showq
-clear
-nano run.sh 
-ls
-nano guided.c 
-./queue.sh 
-showq
-ls
-make clear
-ls
-make clear
-rm resultsGuidedT*
-ls
-nano Makefile 
-nano run.sh 
-nano guided.c 
-./queue.sh 
-nano guided.c 
-nano run.sh 
-./queue.sh 
-nano run.sh 
-nano guided.c 
-./queue.sh 
-showq
-ls
-showq
-ls
-nano Cpteste.e696491
-nano Cpteste.e696492
-nano Cpteste.o696492
 nano guided.c 
 nano run.sh 
 nano guided.c 
@@ -997,4 +538,463 @@ ls
 cd CP/
 LS
 ls
+exit
+ls
+cd CP/
+ls
+rm Images/
+rm -rf Images/
+ls
+nano run.sh 
+nano Makefile 
+./queue.sh 2
+./queue.sh 15
+./queue.sh 16
+./queue.sh 32
+ls
+nano resultsTESTET2Img2048.txt 
+ls
+nano resultsTESTET15Img2048.txt 
+nano 
+ls
+nano resultsTESTET15Img4086.txt
+nano resultsTESTET1Img2048.txt 
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET32Img2048.txt 
+rm resultsTESTET*
+nano run.sh 
+nano guided.c 
+nano run.sh 
+make clear
+./queue.sh 1
+./queue.sh 4
+ls
+nano resultsTESTET1Img\{256\}.txt 
+nano run.sh 
+make clear
+nano resultsTESTET*
+rm resultsTESTET*
+ls
+./queue.sh 4
+./queue.sh 1
+ls
+nano resultsTESTET4Img256.txt 
+nano resultsTESTET1Img256.txt 
+nano run.sh 
+./queue.sh 1
+./queue.sh 4
+ls
+qstat -u pg41086
+qstat
+nano guided.c 
+nano Makefile 
+nano run.sh 
+ls
+make clear
+rm resultsTESTET*
+ls
+nano Makefile 
+nano run.sh 
+./queue.sh 2
+./queue.sh 4
+./queue.sh 8
+./queue.sh 16
+./queue.sh 32
+showq
+ls
+nano resultsTESTET16Img2048.txt 
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET32Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET16Img2048.txt
+nano resultsTESTET32Img2048.txt
+nano resultsTESTET32Img4096.txt 
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET32Img4096.txt 
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET2Img4096.txt 
+nano resultsTESTET4Img4096.txt 
+nano resultsTESTET8Img4096.txt 
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET8Img4096.txt 
+rm Cpteste*
+rm work 
+rm resultsTESTET*
+ls
+nano teste.c 
+./queue.sh 2
+./queue.sh 4
+./queue.sh 16
+./queue.sh 32
+ls
+make clear
+nano teste.c 
+rm resultsTESTET*
+./queue.sh 2
+./queue.sh 16
+./queue.sh 32
+showq
+ls
+nano Cpteste.e697347
+nano Cpteste.o697347
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET32Img4096.txt 
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET2Img4096.txt 
+nano resultsTESTET16Img4096.txt 
+./queue.sh 1
+ls
+nano resultsTESTET1Img4096.txt 
+nano resultsTESTET2Img4096.txt 
+nano resultsTESTET1Img4096.txt 
+nano guided.c 
+rm resultsTESTET*
+make clear
+nano run.sh 
+nano Makefile 
+./queue.sh 2
+./queue.sh 16
+./queue.sh 32
+ls
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET1Img4096.txt 
+nano resultsTESTET2Img4096.txt 
+ls
+nano Cpteste.e697354
+nano Cpteste.e697352
+nano Cpteste.e697353
+nano Cpteste.o697353
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET32Img4096.txt 
+nano guided.c 
+./queue.sh 2
+ls
+showq
+ls
+nano resultsTESTET2Img4096.txt 
+rm resultsTESTET*
+ls
+rm Cpteste.*
+ls
+nano guided.c 
+./queue.sh 2
+ls
+nano resultsTESTET2Img256.txt 
+nano Cpteste.e697356 
+nano Cpteste.o697356 
+ls
+rm resultsTESTET2Img
+rm resultsTESTET2Img*
+ls
+make clear
+ls
+nano Makefile 
+./queue.sh 2
+./queue.sh 1
+ls
+nano resultsTESTET2Img4096.txt 
+nano resultsTESTET1Img4096.txt 
+./queue.sh 16
+nano resultsTESTET16Img4096.txt 
+ls
+nano resultsTESTET16Img4096.txt 
+showq
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET2Img4096.txt 
+ls
+make clear
+rm resultsTESTET*
+ls
+rm guided.c 
+ls
+nano run.sh 
+nano Makefile 
+./queue.sh 2
+./queue.sh 16
+./queue.sh 32
+ls
+showq
+clear
+ls
+nano resultsTESTET2Img4096.txt 
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET2Img4096.txt 
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET2Img4096.txt 
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET2Img4096.txt 
+nano resultsTESTET2Img1024.txt 
+nano resultsTESTET16Img1024.txt 
+showq
+nano resultsTESTET16Img1024.txt 
+nano resultsTESTET32Img1024.txt 
+nano resultsTESTET2Img1024.txt 
+showq
+qstat
+showq
+nano Makefile 
+make clear
+rm re*
+ls
+nano Makefile 
+rm Cpteste.*
+ls
+./queue.sh 2
+./queue.sh 32
+./queue.sh 16
+showq
+ls
+nano Cpteste.e697365
+make clear
+ls
+nano Makefile 
+./queue.sh 2
+ls
+./queue.sh 16
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+nano run.sh
+nano Makefile 
+make clear
+ls
+rm resultsTESTET*
+ls
+./queue.sh 16
+./queue.sh 2
+ls
+nano resultsTESTET16Img2048.txt 
+nano resultsTESTET2Img2048.txt 
+ls
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+nano Makefile 
+nano guided.c 
+ls
+make clear
+nano Makefile 
+./queue.sh 2
+./queue.sh 16
+ls
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+nano resultsTESTET2Img2048.txt 
+./queue.sh 4
+nano resultsTESTET4Img2048.txt 
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET4Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+./queue.sh 32
+nano resultsTESTET32Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+nano resultsTESTET32Img2048.txt 
+./queue.sh 64
+nano resultsTESTET64Img2048.txt 
+nano resultsTESTET32Img2048.txt 
+nano resultsTESTET2Img1024.txt 
+nano resultsTESTET16Img1024.txt 
+nano resultsTESTET2Img1024.txt 
+nano resultsTESTET16Img1024.txt 
+nano resultsTESTET32Img1024.txt 
+nano resultsTESTET64Img1024.txt 
+nano resultsTESTET32Img1024.txt 
+nano resultsTESTET16Img1024.txt 
+nano resultsTESTET2Img1024.txt 
+nano resultsTESTET4Img1024.txt 
+nano resultsTESTET16Img1024.txt 
+nano resultsTESTET2Img1024.txt 
+nano resultsTESTET2Img4096.txt 
+nano resultsTESTET16Img4096.txt 
+nano resultsTESTET32Img4096.txt 
+nano resultsTESTET64Img4096.txt 
+nano guided.c 
+make clear
+ls
+nano guided.c 
+./queue.sh 2
+./queue.sh 16
+nano resultsTESTET2Img2048.txt 
+nano resultsTESTET16Img2048.txt 
+showq
+ls
+make clear
+ls
+make clear
+rm Cpteste.* resultsTESTET* outI*
+ls
+nano guided.c 
+nano Makefile 
+nano run.sh 
+./queue.sh 1
+./queue.sh 2
+nano run.sh 
+make clear
+rm re*
+ls
+make clear
+rm Cpteste.*
+ls
+showq
+clear
+nano run.sh 
+./queue.sh 1
+./queue.sh 2
+./queue.sh 4
+./queue.sh 8
+./queue.sh 16
+./queue.sh 32
+showq
+ls
+nano run.sh 
+nano Makefile 
+make clear
+nano run.sh 
+./queue.sh 1
+nano run.sh 
+nano Makefile 
+rm dynamic.c dynamic1.c static.c
+ls
+make clear
+rm outImage.pgm 
+ls
+showq
+s
+ls
+nano resultsSeqT1Img2048.txt 
+nano resultsSeqT1Img4096.txt 
+make clear
+make Cpteste.*
+rm Cpteste.*
+rm results*
+ls
+nano run.sh 
+nano guided.c 
+nano run.sh 
+nano Makefile 
+./queue.sh 1
+./queue.sh 2
+./queue.sh 4
+./queue.sh 8
+./queue.sh 16
+./queue.sh 32
+nano run.sh 
+nano Makefile 
+nano dynamic1.c 
+./queue.sh 1
+./queue.sh 2
+./queue.sh 4
+./queue.sh 8
+./queue.sh 16
+./queue.sh 32
+nano run.sh 
+nano dynamic1.c 
+nano Makefile 
+showq
+nano Makefile 
+nano static.c 
+nano run.sh 
+nano Makefile 
+nano run.sh 
+showq
+ls
+make clear
+nano Makefile 
+nano run.sh 
+./queue.sh 1
+./queue.sh 2
+./queue.sh 4
+./queue.sh 8
+./queue.sh 16
+./queue.sh 64
+nano run.sh 
+showq
+ls
+nano guided.c 
+nano run.sh 
+nano Makefile 
+./queue.sh 1
+./queue.sh 2
+./queue.sh 4
+./queue.sh 8
+./queue.sh 16
+./queue.sh 32
+./queue.sh 64
+showq
+qstat
+ls
+rm resultsDynamic*
+make clear
+nano Makefile 
+nano run.sh 
+
+nano run.sh 
+nano Makefile 
+./queue.sh 64
+showq
+cd CP/
+LS
+ls
+nano results
+nano run.sh 
+nano Makefile 
+./queue.sh 128
+showq
+clear
+ls
+rm resultsGuidedT1Img1024.txt 
+rm resultsGuidedT2Img1024.txt 
+rm resultsGuidedT4Img1024.txt 
+rm resultsGuidedT8Img1024.txt 
+rm resultsGuidedT16Img1024.txt 
+rm resultsGuidedT32Img1024.txt 
+rm resultsGuidedT64Img1024.txt 
+nano run.sh 
+rm resultsGuidedT64Img2048.txt 
+cd CP/
+ls
+rm resultsGuidedT*
+nano run.sh 
+nano Makefile 
+cd CP/
+ls
+showq
+clear
+nano run.sh 
+nano Makefile 
+./queue.sh 1
+./queue.sh 2
+./queue.sh 4
+./queue.sh 8
+./queue.sh 16
+./queue.sh 32
+./queue.sh 64
+nano guided.c 
+rm Cpteste.*
+LS
+ls
+cd CP/
+ls
+showq
+ls
+rm resultsGuided*
+nano run.sh 
+ls
+./queue.sh 1
+./queue.sh 2
+./queue.sh 4
+./queue.sh 8
+./queue.sh 16
+./queue.sh 32
+./queue.sh 64
+./queue.sh 128
+showq
+qsta
+qstat
+showq
 exit

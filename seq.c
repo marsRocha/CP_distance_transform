@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <ctype.h> // needed for isspace();
+#include <ctype.h>
 #include <omp.h>
 
 #define MAX_VALUE 65535
@@ -111,10 +111,8 @@ void transform(){
                     //percorre os vizinhos
                     for (int r = row-1; r <= row+1; r++) {
                         for (int c = col-1; c <= col+1; c++) {
-                            if(r == row && c == col)
-                                continue;
                             //se nao for o pixel onde estou ou existir no array
-                            if(r <= -1 || r >= rows + 1 || c <= -1 || c >= columns + 1){
+                            if((r != row && c != col) || (r <= -1 || r >= rows + 1 || c <= -1 || c >= columns + 1)){
                                 int neiPixel = pixelData[c + r * columns];
                                 if(neiPixel < minNei)
                                     minNei = neiPixel;
@@ -151,7 +149,7 @@ int main(int argc, char* argv[]){
 
     char* filename = argv[1];
     char* ofilename = "outImage.pgm"; 
-    
+
     //reads the distance tranform of the original image
     readPgmFile(filename);
 
